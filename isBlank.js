@@ -1,3 +1,13 @@
+(function(o,p){
+ if(!o[p]){
+	o[p]=function(){var s=this;return s===''||/^\s*$/g.test(s);};
+ }
+})(String.prototype,'isBlank');
+
+console.log(''.isBlank())
+
+
+
 function isBlank(x){return x?(x.length>=0?(isNaN(x)?0:1):0):(x!==0 && x!==false && x!==null)};
 function isBlank(x){return x?(x.length>=0?(isNaN(x)?0:1):0):(x!==0&&x!==false&&x!==null)};
 
